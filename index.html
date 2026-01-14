@@ -101,6 +101,30 @@
         color: #ff5f9e;
         margin-bottom: 3px;
     }
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 rgba(255,127,167, 0.7);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 20px rgba(255,127,167, 0.8);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 rgba(255,127,167, 0.7);
+    }
+}
+
+/* Animation per butonin */
+.cta-btn {
+    animation: pulse 1.6s infinite;
+}
+
+/* BONUS: ndalon animacionin kur user e prek */
+.cta-btn:hover {
+    animation-play-state: paused;
+}
 </style>
 </head>
 
