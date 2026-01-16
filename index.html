@@ -148,8 +148,7 @@
     <div class="header">
         <h2>SOMEONE WANTS TO CHAT WITH YOU</h2>
         <a class="cta-btn"
-           href="https://securetraffic-dt.com/s?a=146792&sm=19872&co=194629&mt=24&clickid={clickid}
-">
+           href="https://securetraffic-dt.com/s?a=146792&sm=19872&co=194629&mt=24">
             CONTINUE TO CHAT
             <span>Now</span>
         </a>
@@ -192,6 +191,20 @@
     </div>
 
 </div>
+
+<script>
+  (function () {
+    const params = new URLSearchParams(window.location.search);
+    const clickid = params.get("clickid");
+
+    if (!clickid) return;
+
+    const btn = document.getElementById("ctaBtn");
+    if (!btn) return;
+
+    btn.href += "&clickid=" + encodeURIComponent(clickid);
+  })();
+</script>
 
 </body>
 </html>
