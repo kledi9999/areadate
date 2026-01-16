@@ -193,18 +193,18 @@
 </div>
 
 <script>
-  (function () {
-    const params = new URLSearchParams(window.location.search);
-    const clickid = params.get("clickid");
+(function () {
+  const params = new URLSearchParams(window.location.search);
+  const clickid = params.get("clickid");
+  if (!clickid) return;
 
-    if (!clickid) return;
+  const btn = document.getElementById("ctaBtn");
+  if (!btn) return;
 
-    const btn = document.getElementById("ctaBtn");
-    if (!btn) return;
-
-    btn.href += "&clickid=" + encodeURIComponent(clickid);
-  })();
+  btn.href += "&s1=" + encodeURIComponent(clickid);
+})();
 </script>
+
 
 </body>
 </html>
